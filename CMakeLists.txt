@@ -3,5 +3,7 @@ project(cpp_calculator)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp)
-add_executable(cpp_calculator ${SOURCE_FILES})
+include_directories("include")
+
+set(SOURCE_FILES main.cpp src/Sum.cpp)
+add_executable(calculator ${SOURCE_FILES})
