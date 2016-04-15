@@ -9,14 +9,16 @@
 
 //Abstract class
 class BinaryOperation: public IOperation {
-public:
-  virtual double evaluate();
-  virtual std::string toString();
-  virtual IOperation firstOperation();
-  virtual IOperation secondOperation();
-  int getDepth();
 
-  virtual ~BinaryOperation();
+public:
+  virtual IOperation * firstArgument() = 0;
+  virtual IOperation * secondArgument() = 0;
+  virtual double evaluate() = 0;
+  virtual void toString() = 0;
+//  IOperation secondOperation();
+//  int getDepth();
+
+//  virtual ~BinaryOperation();
 };
 
 

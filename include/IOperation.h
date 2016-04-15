@@ -20,16 +20,16 @@ public:
      *
      * @return String representation of current operation like "1+4".
      */
-  virtual std::string toString();
+  virtual void toString() = 0;
 
   /**
      * Return a number of nested operations for current operation.
      *
      * @return Value of this operation
      */
-  virtual int getDepth();
+//  virtual int getDepth() = 0;
 
-  virtual ~IOperation();
+//  virtual ~IOperation();
 };
 
 

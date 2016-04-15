@@ -6,11 +6,21 @@
 #define CPP_CALCULATOR_SUM_H
 
 
-class Sum {
+#include "BinaryOperation.h"
+
+
+class Sum: public BinaryOperation {
 private:
+  IOperation * firstArg;
+  IOperation * secondArg;
 public:
+  Sum();
+  Sum(IOperation *, IOperation *);
+  void setArguments(IOperation *, IOperation *);
   void toString();
-protected:
+  double evaluate();
+  IOperation * firstArgument();
+  IOperation * secondArgument();
 };
 
 
